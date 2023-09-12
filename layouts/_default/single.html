@@ -48,8 +48,10 @@
 
   <hr />
 
+  {{ if eq .Section $.Site.Params.contentTypeName }}
   {{ if not (.Params.hideComments | default false) }}
     {{ partial "comments.html" . }}
+  {{ end }}
   {{ end }}
 
   {{ if eq .Type $.Site.Params.contentTypeName }}
