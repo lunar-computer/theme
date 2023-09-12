@@ -46,12 +46,12 @@
     {{- end -}}
   </div>
 
-  {{ if eq .Type $.Site.Params.contentTypeName }}
-    {{ partial "posts_pagination.html" . }}
-  {{ end }}
-
   {{ if not (.Params.hideComments | default false) }}
     {{ partial "comments.html" . }}
+  {{ end }}
+
+  {{ if eq .Type $.Site.Params.contentTypeName }}
+    {{ partial "posts_pagination.html" . }}
   {{ end }}
 </article>
 {{ end }}
