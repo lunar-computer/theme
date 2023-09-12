@@ -46,6 +46,8 @@
     {{- end -}}
   </div>
 
+  <hr />
+
   {{ if not (.Params.hideComments | default false) }}
     {{ partial "comments.html" . }}
   {{ end }}
